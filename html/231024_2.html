@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form>
+        <!-- form태그 & input태그 -->
+        <input type="button" value="버튼">
+        <input type="text" placeholder="ID" disabled value="ID값">
+        <input type="password" placeholder="PW">
+        <input type="checkbox" name="fruite" value="apple" checked>apple
+        <input type="checkbox" name="fruite" value="banana">banana
+        <input type="radio" name="gender" value="man">남자
+        <input type="radio" name="gender" value="woman">여자
+        <input type="date" name="calendar">
+        <input type="datetime-local" name="calendar">
+
+        <select>
+            <optgroup label="커피">
+                <option value="americano">아메리카노</option>
+                <option value="latte">라떼</option>
+                <option value="vanila">바닐라</option>
+            </optgroup>
+            <optgroup label="쥬스">
+                <option value="포도">포도</option>
+                <option value="딸기" selected>딸기</option>
+                <option value="배" disabled>배</option>
+            </optgroup>
+        </select>
+    </form>
+
+
+
+    <form>
+        <h1>설문조사</h1>
+        이름<input type="text" name="ID"><br>
+        이메일<input type="email" placeholder="rrr@naver.com">
+
+        <h2>나이</h2>
+        <input type="radio" name="age" value="10대" checked> 10대
+        <input type="radio" name="age" value="20대">20대
+        <input type="radio" name="age" value="30대">30대
+        <input type="radio" name="age" value="30대">40대
+        <input type="radio" name="age" value="50대">50대
+        <input type="radio" name="age" value="60대 이상">60대 이상
+
+        <h2>원하는 강의(복수응답가능합니다.)</h2>
+        <input type="checkbox" name="subjet" id="html" checked>html
+        <input type="checkbox" name="subject" id="css">css
+        <input type="checkbox" name="subject" id="Javascript">Javascript<br>
+        <textarea placeholder="하고 싶은 말을 입력하시오" cols="50" rows="10"></textarea>
+        <input type="submit" value="제출">
+    </form>
+
+    <hr>
+    <!-- table -->
+    <table border="1px" cellspacing="0" cellpadding="5" width="300px" height="100px">
+        <tr>
+            <th colspan="2">이름</th>
+            <th>나이</th>
+            <th>전화번호</th>
+        </tr>
+        <tr>
+            <th rowspan="2">luna</th>
+            <th>100</th>
+            <th>01032165478</th>
+        </tr>
+        <tr>
+            <th>150</th>
+            <th>01032165478</th>
+        </tr>
+    </table>
+
+    <!-- ul>li>h2 -->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+</body>
+
+</html>
