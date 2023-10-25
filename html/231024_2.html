@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    img {
+        width: 100px;height: 100px;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+    }
+</style>
 
 <body>
 
@@ -86,6 +95,56 @@
         <li></li>
     </ul>
 
+    <!-- 과제4 -->
+    <table border="1px" cellspacing="0" cellpadding="10" width="450px" height="100px" style="text-align: center;">
+        <tr>
+            <th>구분</th>
+            <th>음료</th>
+            <th>가격</th>
+            <th>이미지</th>
+        </tr>
+        <tr>
+            <td rowspan="2">커피류</td>
+            <td><a href="">아메리카노</a></td>
+            <td>4200원</td>
+            <td><img src="../커피.jpg" alt=""></td>
+        </tr>
+        <tr>
+            <!-- <th>커피류</th> -->
+            <td><a href="">돌체라떼</a></td>
+            <td>4800원</td>
+            <td><img src="../돌체라떼.jpg" alt=""></td>
+        </tr>
+        <tr>
+            <td rowspan="2">주스류</td>
+            <td><a href="">자바칩프라페</a></td>
+            <td rowspan="2">5000원</td>
+            <td><img src="../자바침.jpg" alt=""></td>
+        </tr>
+        <tr>
+            <!-- <th>주스류</th> -->
+            <td><a href="">녹차 프라푸치노</a></td>
+            <!-- <th>5000원</th> -->
+            <td><img src="../녹차.jpg" alt=""></td>
+        </tr>
+    </table>
+
+    <!-- 과제 3 -->
+    <table border="1px" cellspacing="0" cellpadding="5" width="300px" height="100px" style="margin-top: 50px;">
+        <tr>
+            <td colspan="3">1</td>
+            <td rowspan="2">2</td>
+        </tr>
+        <tr>
+            <td rowspan="2">3</td>
+            <th>center</th>
+        </tr>
+        <tr>
+            <td colspan="4">4</td>
+        </tr>
+    </table>
+
+    
 </body>
 
 </html>
