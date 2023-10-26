@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 가상 클래스 */
+    /* hover : 마우스 커서 올렸을 때 */
+    a:hover {
+        color: white;
+        background-color: black;
+    }
+
+    /* active : 마우스 클릭하고 있는 동안 */
+    a:active {
+        background-color: red;
+    }
+
+    /* focus :  */
+    input:focus {
+        /* background-color: gray; */
+    }
+
+    /* 가상 클래스 과제 */
+    .subject h1:hover {
+        color: red;
+    }
+
+    .subject a:active {
+        background-color: blue;
+    }
+
+    .subject input:focus {
+        background-color: orange;
+    }
+
+    /* first-child */
+    .fruits span:first-child {
+        color: red;
+    }
+
+    /* div가 첫번째 자식요소가 아니기 때문에 선택x */
+    .fruits div:first-child {
+        color: violet;
+    }
+
+    /* lasg-child */
+    .fruits h3:last-child {
+        color: pink;
+    }
+
+    /* nth-child(n) */
+    .fruits *:nth-child(2) {
+        color: aqua;
+    }
+
+    /* nth-child(n) */
+    .fruits *:nth-child(2n) {
+        /* n은 0부터 */
+        background-color: yellow;
+    }
+
+    /* not */
+    .fruits *:not(span) {
+        background-color: lightblue;
+        color: blueviolet;
+    }
+
+    .stripes div:nth-child(2n+1) {
+        color: white;
+        background-color: navy;
+    }
+
+    .stripes div:nth-child(2n) {
+        color: black;
+        background-color: yellow;
+    }
+
+    /* 가상 요소 선택자 */
+    /* before */
+    .fruits::before{
+        /* content: "과일 목록 시작";    */
+        content: url(../녹차.jpg);
+    }
+    /* after */
+    .fruits::after{
+        content: "과일 목록 끝";
+    }
+
+    /* 가상 요소 선택자 과제 */
+    .box::before{
+        content: "택시 ";
+    }
+
+    .box::after{
+        content: " 빨리";
+    }
+
+    /* 속성 선택자 */
+    [readonly]{
+        background-color: lightgray;
+    }
+
+    *:not([placeholder]){
+        /* background-color: blueviolet; */
+    }
+
+    /* 속성 선택자 과제 */
+    [disabled]{
+        background-color: red;
+    }
+
+    [placeholder="이름"]{
+        background-color: orange;
+    }
+
+    *:not([placeholder]){
+        background-color: blue;
+    }
+
+    /* css 선택자 우선순위 */
+    /* !important를 넣어주면 같은 태그라도 위치에 상관없이 무조건 적으로 우선순위 */
+
+
+</style>
+
+<body>
+    <a href="https://www.naver.com/">Naver</a>
+    <input type="text">
+
+    <div class="subject">
+        <h1>h1 태그</h1>
+        <a href="">a 태그</a>
+        <input type="text">
+    </div>
+
+    <hr>
+
+    <div class="fruits">
+        <span>딸기</span>
+        <span>수박</span>
+        <div>오렌지
+            <div>자식 오렌지</div>
+        </div>
+        <p>망고</p>
+        <h3>사과</h3>
+    </div>
+
+    <div class="stripes">
+        <div>navy</div>
+        <div>yellow</div>
+        <div>navy</div>
+        <div>yellow</div>
+        <div>navy</div>
+        <div>yellow</div>
+        <div>navy</div>
+        <div>yellow</div>
+        <div>navy</div>
+        <div>yellow</div>
+    </div>
+
+    <div class="box">요기요!</div>
+
+    <input type="text">
+    <input type="text" readonly>
+    <input type="password" placeholder="PW">
+
+    <hr>
+
+    <input type="text" placeholder="이름">
+    <input type="password" value="PW">
+    <input type="text" value="000-0000-0000">
+    <input type="text" placeholder="핸드폰">
+    <input type="text" placeholder="주민번호" disabled>
+</body>
+
+</html>

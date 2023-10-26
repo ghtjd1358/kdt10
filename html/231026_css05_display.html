@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .inline{
+        background-color: yellow;
+        /* width: 100px; 사용 불가X */
+    }
+
+    .block{
+        background-color: orange;
+        width: 100px;height: 100px;
+    }
+    .inline-block{
+        display: inline-block;
+        background-color: red;
+        width: 200px;
+    }
+
+    /* 과제 */
+    .orange{
+        background-color: orange;
+        width: auto;height: 200px;
+        margin-top: 50px;
+    }
+
+    .kdt{
+        width: 200px;height: 100px;
+        display: inline-block;
+        margin: 0 0 0 30px;
+    }
+
+    .sky{
+        background-color: skyblue;
+        margin-left: 0;
+    }
+
+    .green{
+        background-color: green;
+    }
+
+    .red{
+        background-color: red;
+    }
+</style>
+<body>
+    <!-- inline & block -->
+    <span class="inline">Hello</span>
+    <span class="inline">World</span>
+
+    <div class="block"><div>Hello World</div></div>
+    <span>span</span>
+    <div class="inline-block">world</div>
+
+    <!-- 문법에 맞지 않음 inline 안에 block은 들어갈 수 없음 -->
+    <span>
+        <div>안된다!</div>
+    </span>
+
+    <div class="margin"></div>
+
+
+
+
+
+    <div class="orange">
+        <div class="kdt sky">HTML</div>
+        <div class="kdt green">css</div>
+        <div class="kdt red">Javascript</div>
+    </div>
+</body>
+</html>
