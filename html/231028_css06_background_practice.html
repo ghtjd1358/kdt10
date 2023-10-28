@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background practice</title>
+</head>
+<style>
+    .sky{
+        width: 800px;height: 500px;
+        background-color: skyblue;
+        border: 1px solid black;
+    }
+
+    .box1{
+        background-image: url(https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a);
+
+        background-position: center;
+        background-repeat: repeat-x;
+    }
+    .box2{
+        background-image: url(https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a);
+
+        /* contain : 이미지를 더 짧은 축, 더 짧은 너비에 맞춤 */
+        background-size: contain;
+        background-position: 100px 30px;
+        background-repeat: no-repeat;
+    }
+    .box3{
+        background-image: url(https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a);
+
+        /* cover : 이미지의 크기를 더 긴 축, 더 넓은 너비에 맞춤 */
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* background-position: 50px 100px; */
+    }
+
+</style>
+<body>
+        <div class="sky box1"></div>
+        <div class="sky box2"></div>
+        <div class="sky box3"></div>
+</body>
+</html>

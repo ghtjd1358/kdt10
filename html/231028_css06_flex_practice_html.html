@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+</head>
+<style>
+    /* flex-direction */
+    .container {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        display: flex;
+        /* flex-direction */
+        flex-direction: row;
+    }
+
+    .container2 {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .container3 {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container>div {
+        width: 100px;
+        height: 100px;
+    }
+
+    .container2>div {
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .container3>div {
+        width: 100px;
+        height: 100px;
+    }
+
+    .item1 {
+        background-color: red;
+    }
+
+    .item2 {
+        background-color: yellow;
+    }
+
+    .item3 {
+        background-color: blue;
+    }
+
+    /* flex-wrap  */
+
+    .container4 {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        margin-top: 50px;
+        display: flex;
+    }
+
+    .container4>div {
+        width: 100px;
+        height: 100px;
+    }
+
+    .container5 {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        /* align-content: flex-start; */
+    }
+
+    .container5>div {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* flex-wrap 마지막 과제 */
+    .container6 {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    .container6>div {
+        width: 100px;
+        height: 100px;
+    }
+
+    .container7 {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container7>div {
+        width: 100px;
+        height: 100px;
+    }
+
+    .container8 {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center
+    }
+    
+    .container8>div {
+        width: 100px;
+        height: 100px;
+    }
+
+    .container9 {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    justify-content: center;
+    }
+    
+    .container9>div {
+        width: 100px;
+        height: 100px;
+    }
+
+    .container10 {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+    
+    .container10>div {
+        width: 100px;
+        height: 100px;
+    }
+
+    .container11 {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: flex-start
+    }
+    
+    .container11>div {
+        width: 100px;
+        height: 100px;
+    }
+
+    
+
+
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+    </div>
+
+    <div class="container2">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+    </div>
+
+    <div class="container3">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+    </div>
+
+    <div class="container3">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+    </div>
+
+    <div class="container4">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+    </div>
+
+    
+    <div class="container5">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+    </div>
+
+
+    <!-- flex-wrap 과제 -->
+    <div class="container6">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+    </div>
+
+    <div class="container7">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+    </div>
+
+    <div class="container8">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+    </div>
+
+    <div class="container9">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+    </div>
+
+    <div class="container10">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+    </div>
+
+    <div class="container11">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+    </div>
+
+</body>
+
+</html>

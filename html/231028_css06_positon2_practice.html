@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<style>
+    /* 과제1 */
+    .container{
+        width: 500px;height: 500px;
+        border: 5px solid black;
+        padding: 0;
+        position: relative;
+    }
+
+    .box{
+        width: 100px;height: 100px;
+        text-align: center;line-height: 100px;
+    }
+
+    .box1{
+        background-color: red;
+    }
+
+    .box2{
+        background-color: orange;
+        position: relative;
+        left: 50px;top: 30px;
+    }
+
+    .box3{
+        background-color: yellow;
+        right: 30px;bottom: 100px;
+        position: absolute;
+    }
+    .box4{
+        background-color:green;
+        right: 100px;top: 100px;
+        position: fixed;
+    }
+
+    /* 과제2 */
+    .container2{
+        width: 500px;height: 500px;
+        border: 5px solid black;
+        position: relative;
+        margin-top: 50px;
+    }
+
+    .item1{
+        background-color: blue;
+        position:absolute;
+        z-index: 2;
+    }
+    .item2{
+        background-color: blueviolet;
+        position: absolute;
+        z-index: 1;
+        top: 30px;left: 30px;
+    }
+    .item3{
+        background-color: skyblue;
+        position: absolute;
+        top: 60px;left: 60px;
+        z-index: 3;
+    }
+    /* 과제3 */
+    .container3{
+        width: 500px;height: 500px;
+        border: 5px solid black;
+        position: relative;
+        margin-top: 50px;
+        /* margin, paddinh 값을 주면 아래에 있는 circle 들의 시작점들이 제각각 달라짐 그래서 top,left,right,bottom 이동 시에 %를 다르게 줘야할 수도 있음 */
+    }
+
+    .circle{
+        width: 100px;height: 100px;
+        border-radius: 50%;
+        text-align: center;line-height: 100px;
+        position: absolute;
+    }
+
+    .circle1{
+        background-color: blue;
+        top: 20%;left: 20%;
+        transform: translate(-20%, -20%);
+        z-index: 1;
+    }
+
+    .circle2{
+        background-color: skyblue;
+        top: 30%;left: 38%;
+        transform: translate(-30%, -38%);
+        z-index: 2;
+    }
+
+    .circle3{
+        background-color: blueviolet;
+        top: 45%;left: 50%;
+        transform: translate(-45%, -50%);
+        z-index: 3;
+    }
+
+    .circle4{
+        background-color: navy;
+        top: 45%;left: 60%;
+        transform: translate(-45%, -50%);
+        /* top: 48%;left: 60%;
+        transform: translate(-48%, -60%); */
+        z-index: 4;
+    }
+
+    .circle5{
+        background-color: purple;
+        top: 45%;left: 70%;
+        transform: translate(-45%, -50%);
+        /* top: 51%;left: 75%;
+        transform: translate(-51%, -75%); */
+        z-index: 5;
+    }
+
+    .white{
+        width: 30px;height: 30px;
+        border-radius: 50%;
+        background-color: white;
+        left: 25px;top: 25px;
+        position: absolute;
+    }
+
+    .black{
+        width: 15px;height: 15px;
+        border-radius: 50%;
+        background-color: black;
+        left: 1px;top: 5px;
+        position: absolute;
+    }
+
+</style>
+<body>
+    <!-- 과제1 -->
+    <div class="container">
+        <div class="box box1">red</div>
+        <div class="box box2">orange</div>
+        <div class="box box3">yellow</div>
+        <div class="box box4">green</div>
+    </div>
+    
+
+    <!-- 과제2 -->
+    <div class="container2">
+        <div class="box item1">item 1</div>
+        <div class="box item2">item 2</div>
+        <div class="box item3">item 3</div>
+    </div>
+
+    <!-- 과제3 -->
+    <div class="container3">
+        <img src="../bg.jpg" alt="배경" style="width: 500px;height: 500px;">
+        <div class="circle circle1">
+            <div class="white">
+                <div class="black"></div>
+            </div>
+        </div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+        <div class="circle circle5"></div>
+    </div>
+</body>
+</html>
