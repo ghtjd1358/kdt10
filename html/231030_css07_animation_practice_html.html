@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+</head>
+<style>
+    /* 실습1 */
+    .con{
+        width: 2000px; height: 2000px;
+        position: relative;
+        border: 1px solid black;
+    }
+
+    .box{
+        width: 500px;height: 500px;
+        position: absolute;
+        transform: skewY(45deg);
+    }
+
+    .box1{
+        background: url(../녹차.jpg);
+        top: 800px;left: 200px;
+        z-index: 3;
+        
+    }
+
+    .box2{
+        background: url(../자바침.jpg);
+        top: 750px;left: 600px;
+        z-index: 2;
+    }
+
+    .box3{
+        background: url(../커피.jpg);
+        top: 700px;left: 1000px;
+        z-index: 1;
+    }
+
+    .box3:hover{
+        transform: scale(2) skewY(-45deg) translate(70%, 150%);
+        /* transform: translateX(50%); */
+        transition: all 5s ease 1s;
+    }
+    /* 실습2 */
+    .text{
+        width: 100px;height: 100px;
+        margin-top: 100px;
+        background-color: black;
+        color: white;
+        overflow: auto;
+        transition: all 1s ease 0.5s;
+    }
+
+    .text:hover{
+        width: 300px;height: 300px;
+    }
+</style>
+<body>
+    <!-- 실습1 -->
+    <div class="con">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    </div>
+    <!-- 실습2 -->
+    <div class="text">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        Saepe itaque quia dolores distinctio? 
+    </div>
+</body>
+</html>

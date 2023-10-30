@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 과제3 */
+    .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: pink;
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        animation: squre 3s linear 0s 6;
+    }
+
+    @keyframes squre {
+        0% {
+            left: 0px;
+            top: 0px;
+        }
+
+        25% {
+            left: 100px;
+            top: 0px;
+        }
+
+        50% {
+            left: 100px;
+            top: 100px;
+        }
+
+        75% {
+            left: 0px;
+            top: 100px;
+        }
+
+        100% {
+            left: 0px;
+            top: 0px;
+        }
+
+    }
+
+    /* 과제4 */
+    p {
+        animation: font 3s ease 0s 1;
+    }
+
+    @keyframes font {
+       from{
+        margin-left: 100%;
+        width: 300%;
+       }
+       to{
+        margin-left: 0%;
+        width: 100%;
+       }
+    }
+</style>
+
+<body>
+    <!-- 과제 3 -->
+    <div class="circle"></div>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, temporibus! Saepe aliquam quibusdam nobis
+        maxime deserunt esse ipsa sed architecto officiis suscipit incidunt dolorem, earum molestias quaerat
+        doloremque deleniti provident
+        </p>
+
+</body>
+
+</html>
