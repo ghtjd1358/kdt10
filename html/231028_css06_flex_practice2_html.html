@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex~</title>
+</head>
+<style>
+    .warp{
+        margin: 0 auto;
+        width: 100%;
+        border: 1px solid black;
+        text-align: center;
+        line-height: 50px;
+        font-weight: bold;
+    }
+    .header{
+        display: flex;
+        background: gainsboro;
+        padding: 5px;
+    }
+
+    .box{
+        margin-left: 10px
+    }
+
+    .header1:nth-child(1){
+        order: 3;
+    }
+
+    .header1{
+        height: 50px;
+        justify-content: flex-end;
+    }
+    .header2{
+        height: 50px;
+        justify-content: flex-end;
+        justify-content: space-between;
+    }
+    .header2{
+        height: 50px;
+        justify-content: flex-end;
+        justify-content: space-between;
+    }
+
+    .header2 > .itme1{
+        margin-left: 0;
+    }
+
+    .header3{
+        height: 50px;
+        justify-content: center;
+    }
+    .empty{
+        background-color: white;
+        height: 50px;
+    }
+</style>
+<body>
+    <div class="warp">
+        <header>
+            <div class="header header1">
+                <div class="box logo1">LOGO</div>
+                <div class="box itme1">MENU1</div>
+                <div class="box item2">MENU2</div>
+                <div class="box item3">MENU3</div>
+            </div>
+            <div class="empty"></div>
+            <div class="header header2">
+                <div class="box itme1">MENU1</div>
+                <div class="box item2">MENU2</div>
+                <div class="box item3">MENU3</div>
+            </div>
+            <div class="empty"></div>
+            <div class="header header3">
+                <div class="box logo1">LOGO</div>
+                <div class="box itme1">MENU1</div>
+                <div class="box item2">MENU2</div>
+                <div class="box item3">MENU3</div>
+                <div class="box item4">LOGIN</div>
+            </div>
+        </header>
+    </div>
+</body>
+</html>
