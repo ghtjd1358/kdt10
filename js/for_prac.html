@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for, while</title>
+    <script>
+        //과제7
+        // for(let i=0;i<=1000;i++){
+        //     if(i%13 == 0 && i%2 == 1){
+        //         console.log(i)
+        //     }
+        // }
+
+
+
+        //과제8
+        // for(let i=2;i<10;i++){
+        //     for(let j=1;j<10;j++){
+        //         console.log(i+'*'+ j + '=' + (i*j))
+        //     }
+
+        // }
+
+        //과제9
+        let n = Number(prompt('값'));
+        let sum = 0;
+
+        for(let i=0;i<n;i++){
+            if(n <=0 && n >= 100) alert('입력값이 잘못됐습니다.');
+            else{
+                if(i%2==0 || i%3 == 0)sum += i;
+            }
+        }
+        console.log('sum :', sum)
+        
+        let sum2 =0;
+        let i =0;
+        while(i < n){
+            if (i%2==0 || i%3 == 0)sum2 += i;
+            i++
+        }
+        
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
