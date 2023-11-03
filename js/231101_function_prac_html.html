@@ -16,11 +16,13 @@
 
         //과제2
         function square(num3) {
-            let num = Number(num3);
-            console.log(Math.pow(num, 2));
+            return Number(num3**2);
+
+            // console.log(Math.pow(num, 2));
         }
 
-        square(4);
+        console.log(square(4));
+
 
 
         //과제3
@@ -31,20 +33,21 @@
         let num1 = Number(prompt('첫번째 숫자')); 
         let num2 = Number(prompt('두번째 숫자'));
 
+
         function add(){
             let result = num1+num2;
             alert(result);
         }
         function sub(){
-            let result = num1+num2;
+            let result = num1-num2;
+            alert(result);
+        }
+        function divide(){
+            let result = num1*num2;
             alert(result);
         }
         function mul(){
-            let result = num1+num2;
-            alert(result);
-        }
-        function div(){
-            let result = num1+num2;
+            let result = num1/num2;
             alert(result);
         }
 

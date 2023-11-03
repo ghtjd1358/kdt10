@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 과제11 -->
+    <div>
+        값1: <input type="text" id="value1" value="">
+        값2: <input type="text" id="value2" value="">
+        연산자: <input type="text" id="value3" value="">
+        결과: <input type="text" id="results" value="">
+    </div>
+ 
+    <button onclick="getValue()">get value</button>
+    <button onclick="reset()">reset</button>
+
+    <!-- 과제2 -->
+    <div>
+        <h1>방명록입니다.</h1>
+        작성자 <input type="text" id="sub1" value="">
+        내용 <input type="text" id="sub2" value="">
+        <button onclick="listAdd">작성</button>
+
+        <table>
+            <tr>
+                <th>번호</th>
+                <th>작성자</th>
+                <th>내용</th>
+                <th>작성일</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>김규리</td>
+                <td>여러번 반가워요</td>
+                <td>2022-\</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <script>
+        function getValue(){
+            let value1 = document.getElementById('value1');
+            let value2 = document.getElementById('value2');
+            let value3 = document.getElementById('value3');
+            let results = document.getElementById('results');
+
+            if(value3.value=='+'){
+                results.value=Number(value1.value)+Number(value2.value)
+            }else if(value3 =='-'){
+                results.value=Number(value1.value)-Number(value2.value)
+            }else if(value3 =='*'){
+                results.value=Number(value1.value)*Number(value2.value)
+            }else if(value3 =='/'){
+                results.value=Number(value1.value)/Number(value2.value)
+            }else{
+                results.value=''
+            }
+        }
+
+        function reset(){
+            value1.value = ''
+            value2.value = ''
+            value3.value = ''
+            results.value = ''
+        }
+    </script>
+</body>
+</html>
