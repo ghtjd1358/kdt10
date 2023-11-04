@@ -1,74 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+
+</style>
+
 <body>
 
     <!-- 과제11 -->
-    <div>
+    <!-- <div>
         값1: <input type="text" id="value1" value="">
         값2: <input type="text" id="value2" value="">
         연산자: <input type="text" id="value3" value="">
         결과: <input type="text" id="results" value="">
-    </div>
- 
-    <button onclick="getValue()">get value</button>
-    <button onclick="reset()">reset</button>
+    </div> -->
+    <!-- <button onclick="getValue()">get value</button>
+    <button onclick="reset()">reset</button> -->
 
     <!-- 과제2 -->
     <div>
         <h1>방명록입니다.</h1>
-        작성자 <input type="text" id="sub1" value="">
-        내용 <input type="text" id="sub2" value="">
-        <button onclick="listAdd">작성</button>
+        작성자 <input type="text" id="name" value="">
+        내용 <input type="text" id="content" value="">
+        <button type="button" onclick="writeNote()">작성</button>
 
-        <table>
+        <table id="table" border="1px" cellspacing="0" cellpadding="10" width="500px" height="100px"
+            style="text-align: center;margin-top: 50px;">
             <tr>
-                <th>번호</th>
-                <th>작성자</th>
-                <th>내용</th>
-                <th>작성일</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>김규리</td>
-                <td>여러번 반가워요</td>
-                <td>2022-\</td>
+                <td id="no">번호</td>
+                <td id="per">작성자</td>
+                <td id="str">내용</td>
+                <td id="da">작성일</td>
             </tr>
         </table>
     </div>
 
-
-
     <script>
-        function getValue(){
-            let value1 = document.getElementById('value1');
-            let value2 = document.getElementById('value2');
-            let value3 = document.getElementById('value3');
-            let results = document.getElementById('results');
+        //과제2
+        //전역 변수 cnt라는 변수
+        //전역 변수 : 어디서든 사용 가능!
+        let cnt = 1;
+        
 
-            if(value3.value=='+'){
-                results.value=Number(value1.value)+Number(value2.value)
-            }else if(value3 =='-'){
-                results.value=Number(value1.value)-Number(value2.value)
-            }else if(value3 =='*'){
-                results.value=Number(value1.value)*Number(value2.value)
-            }else if(value3 =='/'){
-                results.value=Number(value1.value)/Number(value2.value)
-            }else{
-                results.value=''
-            }
+        let name = document.getElementById('name');
+        let content = document.getElementById('content');
+        
+        
+        
+        // let no = document.getElementById('no');
+        // let noV = no.value;
+        // let per = document.getElementById('per');
+        // let perV = per.value;
+        // let str = document.getElementById('str')
+        // let strV = str.value;
+        // let da = document.getElementById('da')
+        // let daV = da.value
+
+       
+
+
+        function writeNote(){
+            //작성자, 내용 요소 선택
+            let nameValue = name.value;
+            let contentValue = content.value;
+            
+            name.value = ""
+            content.value = ""
+
+
+            //테이블추가
+            //여러 개의 자식을 추가할 경우 : 거꾸로 추가해주면 된다
+            //td 만들기 -> td를 tr에 추가 -> (tr>td) 이 tr을 통째로 table에 추가
+
+            //테이블 요소 선택
+            let table = document.getElementById('table');
+            //새로운 요소 만들기 (tr, td -4개 번호, 작성자, 내용, 작성일)
+
+            let garo = document.createElement('tr'); //<tr></tr>
+    
+            //td 4개 만들기
+            let seroNum = document.createElement('td');
+            let seroPeo = document.createElement('td');
+            let seroCon = document.createElement('td');
+            let seroDa = document.createElement('td');
+            
+
+            //td 안의 내용 값 채우기
+            //td1 : 순서(번호)
+            seroNum.innerText= cnt;
+            cnt++;
+            //td2 : 작성자
+            seroPeo.innerText= nameValue;
+            //td3 : 내용
+            seroCon.innerText= contentValue;
+            //td4 : 작성시간
+            let date = new Date();
+            seroDa.innerText = date.getFullYear() + '-' + (date.getMonth()+1) + '-' + date.getDate();
+
+            //tr(garo) 요소에 만든 td들 자식요소로 추가
+            garo.appendChild(seroNum);
+            garo.appendChild(seroPeo);
+            garo.appendChild(seroCon);
+            garo.appendChild(seroDa);
+
+            //tr 요소를 table 요소에 자식요소로 추가
+            table.appendChild(garo);
         }
 
-        function reset(){
-            value1.value = ''
-            value2.value = ''
-            value3.value = ''
-            results.value = ''
+        //초기화 다른 예시
+        let inputs = document.querySelectorAll('input'); //NodeList 
+        console.log(inputs);
+
+        for(let i=0;i <inputs.length;i++){
+            console.log('for 문 : ', inputs[i])
+            //inputs[i] : 위에, name, content 라는 변수로 만들어둔 요소와 동일
+            inputs[i].value = '';
         }
+
+        //과제1
+        //  function getValue() {
+        //     let value1 = document.getElementById('value1');
+        //     let value2 = document.getElementById('value2');
+        //     let value3 = document.getElementById('value3');
+        //     let results = document.getElementById('results');
+        //     /*
+        //     let results = document.getElementById('results').value;
+        //      안됨 -> text '값으로 존재', 요소 X
+        //      */
+
+        //     if (value3.value == '+') {
+        //         results.value = Number(value1.value) + Number(value2.value)
+        //     } else if (value3 == '-') {
+        //         results.value = Number(value1.value) - Number(value2.value)
+        //     } else if (value3 == '*') {
+        //         results.value = Number(value1.value) * Number(value2.value)
+        //     } else if (value3 == '/') {
+        //         results.value = Number(value1.value) / Number(value2.value)
+        //     } else {
+        //         results.value = ''
+        //     }
+        // }
+
+        // function reset() {
+        //     value1.value = ''
+        //     value2.value = ''
+        //     value3.value = ''
+        //     results.value = ''
+        // }
     </script>
 </body>
+
 </html>

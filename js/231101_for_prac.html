@@ -16,33 +16,33 @@
 
 
         //과제8
-        // for(let i=2;i<10;i++){
-        //     for(let j=1;j<10;j++){
-        //         console.log(i+'*'+ j + '=' + (i*j))
-        //     }
+        for(let i=2;i<10;i++){
+            for(let j=1;j<10;j++){
+                console.log(i+'*'+ j + '=' + (i*j))
+            }
 
-        // }
+        }
 
         //과제9
-        let n = Number(prompt('값'));
-        let sum = 0;
+        // let n = Number(prompt('값'));
+        // let sum = 0;
 
-        for(let i=0;i<n;i++){
-            if(n <=0 && n >= 100){
-                alert('입력값이 잘못됐습니다.');  
-            } 
-            else{
-                if(i%2==0 || i%3 == 0)sum += i;
-            }
-        }
-        console.log('sum :', sum)
-        
-        // let sum2 =0;
-        // let i =0;
-        // while(i < n){
-        //     if (i%2==0 || i%3 == 0)sum2 += i;
-        //     i++
+        // for(let i=0;i<n;i++){
+        //     if(n <=0 && n >= 100){
+        //         alert('입력값이 잘못됐습니다.');  
+        //     } 
+        //     else{
+        //         if(i%2==0 || i%3 == 0)sum += i;
+        //     }
         // }
+        // console.log('sum :', sum)
+        
+        let sum2 =0;
+        let i =0;
+        while(i < n){
+            if (i%2==0 || i%3 == 0)sum2 += i;
+            i++
+        }
 
         //for in 구문, do while 구분을 한번 공부해와보세요.
     </script>
