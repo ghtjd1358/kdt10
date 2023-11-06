@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>jQuery 요소 추가, 삭제</title>
+    <style>
+        /* div {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+        } */
+    </style>
+    <script>
+        //과제1
+        // function appleImg() {
+        //     $('.img').css('background', 'url(../jQuery/apple.jpg) no-repeat center');
+        //     $('.img').remove('background', '');
+        // }
+
+        // function bananaImg() {
+        //     $('.img').css('background', 'url(../jQuery/banana.jpg) no-repeat center');
+        //     $('.img').remove('background', '');
+        // }
+
+        // function grapeImg() {
+        //     $('.img').css('background', 'url(../jQuery/grape.jpg) no-repeat center');
+        //     $('.img').remove('background', '');
+        // }
+
+        // function peachImg() {
+        //     $('.img').css('background', 'url(../jQuery/peach.jpg) no-repeat center');
+        //     $('.img').remove('background', '');
+        // }
+
+        // function appleImg(){
+        //     let img = document.querySelector('.div');
+        //     let apple = document.createElement('')
+        //    }
+
+        // 
+
+        //리더님 과제1
+        function changeImg(name){
+            $('img').attr('src', `../jQuery/${name}.jpg`);
+        }
+        
+        </script>
+</head>
+
+<body>
+    <!-- 과제1 -->
+    <!-- <div class="img"></div>
+    <button onclick="appleImg()" type="text">사과</button>
+    <button onclick="bananaImg()" type="text">바나나</button>
+    <button onclick="grapeImg()" type="text">포도</button>
+    <button onclick="peachImg()" type="text">복숭아</button> -->
+
+    <img src="" alt="과일" width="100px" height="100px">
+    <button onclick="changeImg('apple')">사과</button>
+    <button onclick="changeImg('banana')">바나나</button>
+    <button onclick="changeImg('grape')">포도</button>
+    <button onclick="changeImg('peach')">복숭아</button>
+
+</body>
+
+</html>
