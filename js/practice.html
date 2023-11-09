@@ -23,36 +23,145 @@
     // }
 
 
-  
 
 
 
-        // let n=[];
-        // for(let i=1;i<=100;i++){
-        //     n.push(i);
-        // }
-        // let sum = 0;
-        // for(let i=0;i<=n.length;i++){
-        //     // console.log(i);
-        //     sum+=i;
-        //     // console.log(typeof i)
-        // }
-        // console.log(sum);
 
-        let fruit1 = ["사과", "딸기", "파인애플","수박","참외","오렌지","자두","망고"];
-        let fruit2 = ["수박","사과","참외","오렌지","파인애플","망고"];
 
-        // filter 공부해야함
+    let num = [];
+    let sum = 0;
+
+    for (let i = 1; i <= 100; i++) {
+        num.push(i);
+        // sum+=i
+    }
+    // console.log(sum);
+
+    //length 쓸 때 i=0 고정인가?error가 자주 뜬다
+    // let sum = 0;
+    // for(let i=0;i<num.length;i++){
+    //     // console.log(num[i])
+    //     sum+=num[i]
+
+    // }
+    //  console.log(sum);
+
+    // for(let n of num){
+    //     sum+=n;
+    // }
+    // console.log(sum);
+
+    // num.forEach(function(n){
+    //     sum+=n;
+    // })
+    // console.log(sum);
+
+
+
+    // let answer ='';
+
+    // function opt(num1) {
+    //     for (let i = 1; i <= num1;i++) {
+    //         if (i % 2 == 1) {
+    //             answer += '수'
+    //         } else {
+    //             answer += '박'
+    //         }
+    //     }
+    //     return answer;
+    // }
+    // console.log(opt(5)); 
+
+    // filter 공부해야함
+    // let fruit1 = ["사과", "딸기", "파인애플","수박","참외","오렌지","자두","망고"];
+    // let fruit2 = ["수박","사과","참외","오렌지","파인애플","망고"];
+
+    //String으로 된 숫자 값에 length 적용하면 let n = 383인 경우 n[i] 3,8,3으로 분리된다
+    // let sts = String(5483).split('');
+    // let stss = String(5483);
+    
+    // let sums = 0;
+    // console.log(sts)
+    // console.log(stss)
+
+
+    // for(let i=0;i<stss.length;i++){
+    //     console.log(stss[i])
+    //     sums+=parseInt(stss[i]);
+    // }
+    // console.log(sums);
+
 
 
 </script>
 
 <body>
+    <div>
+        <h1>방명록입니다.</h1>
+        작성자 <input type="text" id="name" value="">
+        내용 <input type="text" id="content" value="">
+        <button type="button" onclick="writeNote()">작성</button>
+
+        <table id="table" border="1px" cellspacing="0" cellpadding="10" width="500px" height="100px"
+            style="text-align: center;margin-top: 50px;">
+            <tr>
+                <td id="no">번호</td>
+                <td id="per">작성자</td>
+                <td id="str">내용</td>
+                <td id="da">작성일</td>
+            </tr>
+        </table>
+
+        <ul id="ul">
+            <li>메</li>
+        </ul>
+
+        <button onclick="liButton()">가즈아아아아아</button>
+
+    
+    
+    <script>
+        // let name = document.getElementById('name');
+        // let content = document.getElementById('content');
+        // let ctn = 1;
+
+        // function writeNote(){
+
+        //     let table = document.getElementById('table');
+        //     let tr = document.createElement('tr');
+        //     table.append(tr);
+        //     let td1 = document.createElement('td');
+        //     let td2 = document.createElement('td');
+        //     let td3 = document.createElement('td');
+        //     let td4 = document.createElement('td');
+          
+    
+
+        //     td1.innerText = ctn;
+        //     ctn++;
+        //     td2.innerText = name.value;
+        //     td3.innerText = content.value;
+        //     let date = new Date();
+        //     td4.innerText = date.getFullYear() + '.' + (date.getMonth()+1) + '.' + date.getDate();
 
 
-    <script> 
-       
-        
+        //     tr.append(td1);
+        //     tr.append(td2);
+        //     tr.append(td3);
+        //     tr.append(td4);
+
+        //     name.value = ''
+        //     content.value = ''
+        // }
+
+
+        function liButton(){
+            let ul = document.getElementById('ul');
+            let li = document.createElement('li');
+            li.innerText='구'
+            ul.append(li);
+        }
+      
     </script>
 </body>
 
