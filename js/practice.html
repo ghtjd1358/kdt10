@@ -28,13 +28,13 @@
 
 
 
-    let num = [];
-    let sum = 0;
+    // let num = [];
+    // let sum = 0;
 
-    for (let i = 1; i <= 100; i++) {
-        num.push(i);
-        // sum+=i
-    }
+    // for (let i = 1; i <= 100; i++) {
+    //     num.push(i);
+    //     // sum+=i
+    // }
     // console.log(sum);
 
     //length 쓸 때 i=0 고정인가?error가 자주 뜬다
@@ -96,7 +96,7 @@
 </script>
 
 <body>
-    <div>
+    <!-- <div>
         <h1>방명록입니다.</h1>
         작성자 <input type="text" id="name" value="">
         내용 <input type="text" id="content" value="">
@@ -116,7 +116,7 @@
             <li>메</li>
         </ul>
 
-        <button onclick="liButton()">가즈아아아아아</button>
+        <button onclick="liButton()">가즈아아아아아</button> -->
 
     
     
@@ -155,13 +155,71 @@
         // }
 
 
-        function liButton(){
-            let ul = document.getElementById('ul');
-            let li = document.createElement('li');
-            li.innerText='구'
-            ul.append(li);
-        }
+        // function liButton(){
+        //     let ul = document.getElementById('ul');
+        //     let li = document.createElement('li');
+        //     li.innerText='구'
+        //     ul.append(li);
+        // }
       
+        // let sum1 = 0;
+
+        // function pizza(n){
+        //     for(let i=1;i<=n;i++){
+        //         console.log(n);
+        //         if(i%7==1){
+        //             // console.log(n)
+        //         }
+        //     }
+        //     return;
+        // }
+        // console.log(pizza(7))
+
+//         function solution(array, height) {
+//     var answer = 0;
+    
+//     for(let i=0;i<array.length;i++){
+//         // console.log(array[i])
+//         if(array[i] >= height){
+//             // console.log(array[i])
+//             answer += 1
+//         }else{
+//             answer+=0;
+//         }
+//     }
+//     console.log(typeof);
+//     return answer;
+    
+// }
+// solution([149,180,192,170],167)
+
+// function solution(n) {
+//     let sum = 0;
+    
+//     for(let i=1;i<n;i++){
+//         if(i%2==1){
+//         sum+=i;
+//         }  
+//     }
+//     console.log(sum)
+//     return sum;
+// }
+// solution(10);
+
+function solution(dot) {
+    let answer = 0;
+    
+    for(let i=0;i<dot.length;i++){
+
+        if(dot[i] == true){
+            console.log(dot[i]);
+        }else{
+            // console.log(dot[i]);
+        }
+    }
+}
+solution([3,3])
+
     </script>
 </body>
 

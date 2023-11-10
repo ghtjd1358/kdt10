@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="id">id : </label>
+    <input type="text" name="id" id="id">
+    <label for="pw">password : </label>
+    <input type="text" name="pw" id="pw">
+
+    <button type="button" onclick="login()">로그인</button>
+    <button type="button" onclick="checkLoggedIn()">로그인 확인</button>
+    <button type="button" onclick="logout()">로그아웃</button>
+
+    <script>
+        let name = document.querySelector('#id');
+        let pw = document.querySelector('#pw');
+
+        let id = 'son';
+        let pWs = '1234';
+
+        function login() {
+            if (name.value == id) {
+                if (pw.value == pWs) {
+                    localStorage.setItem('logIn', true);
+                    name.value = "";
+                    pw.value = "";
+                } else {
+                    alert('PW 틀림')
+                }
+            } else {
+                alert('Id 틀림');
+            }
+            
+        }
+
+        function checkLoggedIn(){
+           console.log(localStorage.getItem('logIn')); 
+           if(localStorage == true){
+            console.log(check);
+           }
+        }
+
+        function logout(){
+            localStorage.removeItem('logIn')
+        }
+
+    </script>
+</body>
+
+</html>

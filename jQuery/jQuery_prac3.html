@@ -196,16 +196,26 @@
     </table>
         
     <script>
-        // console.log(dataValue);
+       let target;
+       
+        $('td>p').on('click',function(){
+            // console.log(this);
 
-        $('td > p').on('click',function(){
-          $(this).text() ;
-          $('#date').val($(this).text());
-        });
+            $(this).text();
+            $('#date').val($(this).text());
 
-        let target = (this).text;
-        console.log(target);
+            target = this;
+            console.log(target);
+        })
 
+        function writeSchedule(){
+            let content = $('#content').val();
+
+            $(target).parent().append('<span>' + content + '</span><br>');
+
+            $('#date').val('');
+            $('#content').val('');
+        }
     
     </script>
 

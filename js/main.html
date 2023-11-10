@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #000;
+    }
+
+    #earth {
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: url('../boot/다운로드.jpg') center/cover; 
+      /* 배경 이미지 설정 */
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* 그림자 효과 */
+      animation: rotateEarth 10s linear infinite; /* 회전 애니메이션 */
+    }
+
+    @keyframes rotateEarth {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* CSS 코드 */
+.balloon {
+  position: relative;
+  padding: 10px;
+  background-color: #7fc7af;
+  color: #fff;
+  border-radius: 15px;
+  margin: 30px;
+  max-width: 300px;
+}
+
+.balloon:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 10px;
+  border-color: #7fc7af transparent transparent transparent;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -10px;
+}
+
+
+.speech-bubble {
+      position: relative;
+      max-width: 300px;
+      padding: 15px;
+      background-color: #3498db;
+      color: #fff;
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    .speech-bubble:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      margin-top: -10px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent #3498db transparent transparent;
+    }
+
+    .balloon {
+      position: relative;
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 300px;
+      margin-left: 20px;
+    }
+
+    .balloon:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      margin-top: -10px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent #3498db transparent transparent;
+    }
+  </style>
+</head>
+<body>
+  <div class="balloon-container">
+    <div class="balloon">
+      이곳에 말풍선에 들어갈 내용을 작성하세요.
+    </div>
+  </div>
+
+
+  <!-- HTML 코드 -->
+  
+<div class="speech-bubble">
+  이곳에 말풍선에 들어갈 내용을 작성하세요.
+</div>
+<div class="balloon">
+  이곳에 말풍선에 들어갈 내용을 작성하세요.
+</div>
+
+  <div id="earth"></div>
+
+  <script>
+    let earth = document.getElementById('earth');
+
+    earth.addEventListener('mouseover', function(){
+        earth.style.animationPlayState = 'paused'
+    })
+
+    earth.addEventListener('mouseout', function(){
+        earth.style.animationPlayState = 'running'
+    })
+  </script>
+</body>
+</html>
